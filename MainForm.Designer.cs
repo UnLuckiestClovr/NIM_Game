@@ -46,9 +46,11 @@
             this.TextBoxGroup.Controls.Add(this.OptionBTN4);
             this.TextBoxGroup.Controls.Add(this.OptionBTN2);
             this.TextBoxGroup.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TextBoxGroup.Location = new System.Drawing.Point(12, 712);
+            this.TextBoxGroup.Location = new System.Drawing.Point(14, 890);
+            this.TextBoxGroup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextBoxGroup.Name = "TextBoxGroup";
-            this.TextBoxGroup.Size = new System.Drawing.Size(1644, 294);
+            this.TextBoxGroup.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TextBoxGroup.Size = new System.Drawing.Size(1850, 368);
             this.TextBoxGroup.TabIndex = 0;
             this.TextBoxGroup.TabStop = false;
             // 
@@ -59,21 +61,23 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DialogueLabel.AutoSize = true;
             this.DialogueLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.DialogueLabel.Location = new System.Drawing.Point(45, 18);
-            this.DialogueLabel.MinimumSize = new System.Drawing.Size(1550, 130);
+            this.DialogueLabel.Location = new System.Drawing.Point(51, 22);
+            this.DialogueLabel.MinimumSize = new System.Drawing.Size(1744, 162);
             this.DialogueLabel.Name = "DialogueLabel";
-            this.DialogueLabel.Padding = new System.Windows.Forms.Padding(50, 0, 50, 0);
-            this.DialogueLabel.Size = new System.Drawing.Size(1550, 130);
+            this.DialogueLabel.Padding = new System.Windows.Forms.Padding(56, 0, 56, 0);
+            this.DialogueLabel.Size = new System.Drawing.Size(1744, 162);
             this.DialogueLabel.TabIndex = 4;
             this.DialogueLabel.Text = "DIALOGUE GOES HERE";
+            this.DialogueLabel.Click += new System.EventHandler(this.DialogueLabel_Click);
             // 
             // OptionBTN3
             // 
             this.OptionBTN3.BackColor = System.Drawing.Color.Black;
             this.OptionBTN3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.OptionBTN3.Location = new System.Drawing.Point(849, 171);
+            this.OptionBTN3.Location = new System.Drawing.Point(955, 214);
+            this.OptionBTN3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OptionBTN3.Name = "OptionBTN3";
-            this.OptionBTN3.Size = new System.Drawing.Size(746, 49);
+            this.OptionBTN3.Size = new System.Drawing.Size(839, 61);
             this.OptionBTN3.TabIndex = 3;
             this.OptionBTN3.Text = "Option 3";
             this.OptionBTN3.UseVisualStyleBackColor = false;
@@ -83,9 +87,10 @@
             // 
             this.OptionBTN1.BackColor = System.Drawing.Color.Black;
             this.OptionBTN1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.OptionBTN1.Location = new System.Drawing.Point(48, 171);
+            this.OptionBTN1.Location = new System.Drawing.Point(54, 214);
+            this.OptionBTN1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OptionBTN1.Name = "OptionBTN1";
-            this.OptionBTN1.Size = new System.Drawing.Size(767, 49);
+            this.OptionBTN1.Size = new System.Drawing.Size(863, 61);
             this.OptionBTN1.TabIndex = 2;
             this.OptionBTN1.Text = " Option 1";
             this.OptionBTN1.UseVisualStyleBackColor = false;
@@ -95,31 +100,36 @@
             // 
             this.OptionBTN4.BackColor = System.Drawing.Color.Black;
             this.OptionBTN4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.OptionBTN4.Location = new System.Drawing.Point(849, 226);
+            this.OptionBTN4.Location = new System.Drawing.Point(955, 282);
+            this.OptionBTN4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OptionBTN4.Name = "OptionBTN4";
-            this.OptionBTN4.Size = new System.Drawing.Size(746, 49);
+            this.OptionBTN4.Size = new System.Drawing.Size(839, 61);
             this.OptionBTN4.TabIndex = 1;
             this.OptionBTN4.Text = "Option 4";
             this.OptionBTN4.UseVisualStyleBackColor = false;
+            this.OptionBTN4.Click += new System.EventHandler(this.OptionBTN4_Click_1);
             // 
             // OptionBTN2
             // 
             this.OptionBTN2.BackColor = System.Drawing.Color.Black;
             this.OptionBTN2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.OptionBTN2.Location = new System.Drawing.Point(48, 226);
+            this.OptionBTN2.Location = new System.Drawing.Point(54, 282);
+            this.OptionBTN2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OptionBTN2.Name = "OptionBTN2";
-            this.OptionBTN2.Size = new System.Drawing.Size(767, 49);
+            this.OptionBTN2.Size = new System.Drawing.Size(863, 61);
             this.OptionBTN2.TabIndex = 0;
             this.OptionBTN2.Text = " Option 2";
             this.OptionBTN2.UseVisualStyleBackColor = false;
+            this.OptionBTN2.Click += new System.EventHandler(this.OptionBTN2_Click_1);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1668, 1018);
+            this.ClientSize = new System.Drawing.Size(1876, 1272);
             this.Controls.Add(this.TextBoxGroup);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainForm";
             this.Text = "NIM";
             this.Load += new System.EventHandler(this.Form1_Load);
