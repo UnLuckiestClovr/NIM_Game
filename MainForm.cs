@@ -24,22 +24,23 @@ namespace NIM_Game
 
         private void OptionBTN1_Click(object sender, EventArgs e)
         {
-            OptionBTN1.Text = "BTN1 Clicked";
+            DialogueLabel.Text = "Clicked BTN1";
         }
 
         private void OptionBTN2_Click(object sender, EventArgs e)
         {
-            OptionBTN2.Text = "BTN2 Clicked";
+            DialogueLabel.Text = "Clicked BTN2";
         }
 
         private void OptionBTN3_Click(object sender, EventArgs e)
         {
-            OptionBTN3.Text = "BTN3 Clicked";
+
+            DialogueLabel.Text = "Clicked BTN3";
         }
 
         private void OptionBTN4_Click(object sender, EventArgs e)
         {
-            OptionBTN4.Text = "BTN4 Clicked";
+            DialogueLabel.Text = "Clicked BTN4";
         }
     }
 }
