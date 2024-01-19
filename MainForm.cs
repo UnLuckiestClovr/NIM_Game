@@ -24,24 +24,22 @@ namespace NIM_Game
 
         private void OptionBTN1_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Option 1 Pressed");
-
-
+            OptionBTN1.Text = "BTN1 Clicked";
         }
 
         private void OptionBTN2_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Option 2 Pressed");
+            OptionBTN2.Text = "BTN2 Clicked";
         }
 
         private void OptionBTN3_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Option 3 Pressed");
+            OptionBTN3.Text = "BTN3 Clicked";
         }
 
         private void OptionBTN4_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Option 4 Pressed");
+            OptionBTN4.Text = "BTN4 Clicked";
         }
     }
 }
