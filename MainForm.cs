@@ -12,6 +12,9 @@ namespace NIM_Game
 {
     public partial class MainForm : Form
     {
+        int currentFloor = 2;
+
+
         public MainForm()
         {
             InitializeComponent();
@@ -20,17 +23,13 @@ namespace NIM_Game
         private void Form1_Load(object sender, EventArgs e)
         {
             generateMathProblem();
+            changeScene(1);
         }
 
         private void OptionBTN1_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Option 1 Pressed");
-        }
 
-        private void OptionBTN2_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine("Option 3 Pressed");
-        }
 
         private void DialogueLabel_Click(object sender, EventArgs e)
         {
@@ -39,77 +38,17 @@ namespace NIM_Game
 
         private void OptionBTN3_Click(object sender, EventArgs e)
         {
-            DialogueLabel.Text = "Clicked BTN2";
+            Console.WriteLine("Option 2 Pressed");
+        }
+
+        private void OptionBTN4_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Option 3 Pressed");
         }
 
         private void OptionBTN4_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Option 4 Pressed");
-        }
-
-        private Random random = new Random();
-        public void generateMathProblem()
-        {
-            int intOne = random.Next(10);
-            int intTwo = random.Next(10);
-            int mathType = random.Next(3);
-            switch (mathType)
-            {
-                case 0:
-                    //addition
-                    DialogueLabel.Text = $"What is the answer to the math problem: {intOne} + {intTwo}";
-                    int answerAdd = intOne + intTwo;
-                    setCorrectAnswer(answerAdd);
-                    break;
-                case 1:
-                    //subtration
-                    DialogueLabel.Text = $"What is the answer to the math problem: {intOne} - {intTwo}";
-                    int answerSubtract = intOne - intTwo;
-                    setCorrectAnswer(-answerSubtract);
-                    break;
-                case 2:
-                    //multiplication
-                    DialogueLabel.Text = $"What is the answer to the math problem: {intOne} * {intTwo}";
-                    int answerMultiply = intOne * intTwo;
-                    setCorrectAnswer(answerMultiply);
-                    break;
-                default:
-                    DialogueLabel.Text = "Something Is Broken In The Math Switch Statement";
-                    break;
-            }
-
-        }
-
-        public void setCorrectAnswer(int correctAnswer)
-        {
-            int answerButton = random.Next(4);
-            switch (answerButton)
-            {
-                case 0:
-                    OptionBTN1.Text = correctAnswer.ToString();
-                    OptionBTN2.Text = random.Next(10).ToString();
-                    OptionBTN3.Text = random.Next(10).ToString();
-                    OptionBTN4.Text = random.Next(10).ToString();
-                    break;
-                case 1:
-                    OptionBTN2.Text = correctAnswer.ToString();
-                    OptionBTN3.Text = random.Next(10).ToString();
-                    OptionBTN4.Text = random.Next(10).ToString();
-                    OptionBTN1.Text = random.Next(10).ToString();
-                    break;
-                case 2:
-                    OptionBTN3.Text = correctAnswer.ToString();
-                    OptionBTN4.Text = random.Next(10).ToString();
-                    OptionBTN1.Text = random.Next(10).ToString();
-                    OptionBTN2.Text = random.Next(10).ToString();
-                    break;
-                case 3:
-                    OptionBTN4.Text = correctAnswer.ToString();
-                    OptionBTN1.Text = random.Next(10).ToString();
-                    OptionBTN2.Text = random.Next(10).ToString();
-                    OptionBTN3.Text = random.Next(10).ToString();
-                    break;
-            }
         }
     }
 }
