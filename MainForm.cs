@@ -152,6 +152,77 @@ namespace NIM_Game
             }
         }
 
+        private Random random = new Random();
+        public void generateMathProblem()
+        {
+            int intOne = random.Next(10);
+            int intTwo = random.Next(10);
+            int mathType = random.Next(4);
+            int mathType = random.Next(3);
+            switch (mathType)
+            {
+                case 0:
+                    //addition
+                    DialogueLabel.Text = $"What is the answer to the math problem: {intOne} + {intTwo}";
+                    int answerAdd = intOne + intTwo;
+
+                    setCorrectAnswer(answerAdd);
+                    break;
+                case 1:
+                    //subtration
+                    DialogueLabel.Text = $"What is the answer to the math problem: {intOne} - {intTwo}";
+                    int answerSubtract = intOne - intTwo;
+                    setCorrectAnswer(-answerSubtract);
+                    break;
+                case 2:
+                    //multiplication
+                    DialogueLabel.Text = $"What is the answer to the math problem: {intOne} * {intTwo}";
+                    int answerMultiply = intOne * intTwo;
+                    break;
+                case 3:
+                    //division
+                    DialogueLabel.Text = $"What is the answer to the math problem: {intOne} / {intTwo}";
+                    float answerDivide = intOne / intTwo;
+                    setCorrectAnswer(answerMultiply);
+                    break;
+                default:
+                    DialogueLabel.Text = "Something Is Broken In The Math Switch Statement";
+@@ -89,16 + 86,28 @@ public void setCorrectAnswer(int correctAnswer)
+            switch (answerButton)
+            {
+                case 0:
+
+                    OptionBTN1.Text = correctAnswer.ToString();
+                    OptionBTN2.Text = random.Next(10).ToString();
+                    OptionBTN3.Text = random.Next(10).ToString();
+                    OptionBTN4.Text = random.Next(10).ToString();
+                    break;
+                case 1:
+
+                    OptionBTN2.Text = correctAnswer.ToString();
+                    OptionBTN3.Text = random.Next(10).ToString();
+                    OptionBTN4.Text = random.Next(10).ToString();
+                    OptionBTN1.Text = random.Next(10).ToString();
+                    break;
+                case 2:
+
+                    OptionBTN3.Text = correctAnswer.ToString();
+                    OptionBTN4.Text = random.Next(10).ToString();
+                    OptionBTN1.Text = random.Next(10).ToString();
+                    OptionBTN2.Text = random.Next(10).ToString();
+                    break;
+                case 3:
+
+                    OptionBTN4.Text = correctAnswer.ToString();
+                    OptionBTN1.Text = random.Next(10).ToString();
+                    OptionBTN2.Text = random.Next(10).ToString();
+                    OptionBTN3.Text = random.Next(10).ToString();
+                    break;
+            }
+        }
+    }
+}
+
 
     }
 }
