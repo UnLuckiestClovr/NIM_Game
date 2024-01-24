@@ -39,7 +39,7 @@ namespace NIM_Game
 
         private void OptionBTN2_Click_1(object sender, EventArgs e)
         {
-            Console.WriteLine("Option 2 Pressed");
+            DialogueLabel.Text = "Clicked BTN2";
         }
 
         private void OptionBTN4_Click_1(object sender, EventArgs e)
