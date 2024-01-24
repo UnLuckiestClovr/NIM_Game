@@ -30,6 +30,7 @@ namespace NIM_Game
         private void OptionBTN1_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Option 1 Pressed");
+            sendValue(0);
 
         }
         private void DialogueLabel_Click(object sender, EventArgs e)
@@ -40,16 +41,19 @@ namespace NIM_Game
         private void OptionBTN2_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Option 2 Pressed");
+            sendValue(1);
         }
 
         private void OptionBTN3_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Option 3 Pressed");
+            sendValue(2); 
         }
 
         private void OptionBTN4_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Option 4 Pressed");
+            sendValue(3);
         }
 
         List<string> mainDialogue = new List<string>() {
