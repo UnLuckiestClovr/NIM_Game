@@ -27,6 +27,18 @@ namespace NIM_Game
             changeScene(1);
         }
 
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            int newWidth = Convert.ToInt32(OptionsTopRow.Width * 0.4);
+
+            OptionBTN1.Width = newWidth;
+            OptionBTN2.Width = newWidth;
+            OptionBTN3.Width = newWidth;
+            OptionBTN4.Width = newWidth;
+
+            Console.WriteLine($"Resize Ran: Size {newWidth}");
+        }
+
         private void OptionBTN1_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Option 1 Pressed");
