@@ -54,7 +54,7 @@
             this.TextBoxGroup.Location = new System.Drawing.Point(0, 638);
             this.TextBoxGroup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TextBoxGroup.Name = "TextBoxGroup";
-            this.TextBoxGroup.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.TextBoxGroup.Padding = new System.Windows.Forms.Padding(8);
             this.TextBoxGroup.Size = new System.Drawing.Size(1516, 294);
             this.TextBoxGroup.TabIndex = 0;
             this.TextBoxGroup.TabStop = false;
@@ -87,7 +87,7 @@
             this.OptionBTN2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.OptionBTN2.BackColor = System.Drawing.Color.Black;
             this.OptionBTN2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.OptionBTN2.Font = new System.Drawing.Font("Bauhaus 93", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OptionBTN2.Font = new System.Drawing.Font("Bauhaus 93", 12F);
             this.OptionBTN2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.OptionBTN2.Location = new System.Drawing.Point(8, 0);
             this.OptionBTN2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -104,7 +104,7 @@
             this.OptionBTN4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.OptionBTN4.BackColor = System.Drawing.Color.Black;
             this.OptionBTN4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.OptionBTN4.Font = new System.Drawing.Font("Bauhaus 93", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OptionBTN4.Font = new System.Drawing.Font("Bauhaus 93", 12F);
             this.OptionBTN4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.OptionBTN4.Location = new System.Drawing.Point(1002, 0);
             this.OptionBTN4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -133,7 +133,7 @@
             this.OptionBTN3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.OptionBTN3.BackColor = System.Drawing.Color.Black;
             this.OptionBTN3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.OptionBTN3.Font = new System.Drawing.Font("Bauhaus 93", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OptionBTN3.Font = new System.Drawing.Font("Bauhaus 93", 12F);
             this.OptionBTN3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.OptionBTN3.Location = new System.Drawing.Point(1002, 0);
             this.OptionBTN3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -150,7 +150,7 @@
             this.OptionBTN1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.OptionBTN1.BackColor = System.Drawing.Color.Black;
             this.OptionBTN1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.OptionBTN1.Font = new System.Drawing.Font("Bauhaus 93", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OptionBTN1.Font = new System.Drawing.Font("Bauhaus 93", 12F);
             this.OptionBTN1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.OptionBTN1.Location = new System.Drawing.Point(8, 0);
             this.OptionBTN1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -167,7 +167,7 @@
             this.DialogueLabel.AutoEllipsis = true;
             this.DialogueLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.DialogueLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.DialogueLabel.Font = new System.Drawing.Font("Bauhaus 93", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DialogueLabel.Font = new System.Drawing.Font("Bauhaus 93", 15F);
             this.DialogueLabel.Location = new System.Drawing.Point(8, 27);
             this.DialogueLabel.MinimumSize = new System.Drawing.Size(1024, 130);
             this.DialogueLabel.Name = "DialogueLabel";
