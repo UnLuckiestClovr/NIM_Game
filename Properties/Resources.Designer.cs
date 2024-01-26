@@ -63,6 +63,56 @@ namespace NIM_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AngyCantera {
+            get {
+                object obj = ResourceManager.GetObject("AngyCantera", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AngyCoreyIS {
+            get {
+                object obj = ResourceManager.GetObject("AngyCoreyIS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AngyMaple {
+            get {
+                object obj = ResourceManager.GetObject("AngyMaple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AngyPritchardCS {
+            get {
+                object obj = ResourceManager.GetObject("AngyPritchardCS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Bunker {
+            get {
+                object obj = ResourceManager.GetObject("Bunker", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap commons {
             get {
                 object obj = ResourceManager.GetObject("commons", resourceCulture);
@@ -73,9 +123,29 @@ namespace NIM_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FourthDown {
+            get {
+                object obj = ResourceManager.GetObject("FourthDown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hallwaylvl2 {
             get {
                 object obj = ResourceManager.GetObject("hallwaylvl2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Third {
+            get {
+                object obj = ResourceManager.GetObject("Third", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

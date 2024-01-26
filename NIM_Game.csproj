@@ -89,5 +89,26 @@
   <ItemGroup>
     <None Include="Resources\hallwaylvl2.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FourthDown.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Third.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bunker.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AngyCantera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AngyCoreyIS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AngyMaple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AngyPritchardCS.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

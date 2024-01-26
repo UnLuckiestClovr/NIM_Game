@@ -28,6 +28,8 @@ namespace NIM_Game
             //generateMathProblem();
             //changeScene(1);
             setDegree();
+            //panel1.Hide();
+            panel1.BackColor = Color.Transparent;
         }
 
         private void MainForm_Resize(object sender, EventArgs e)
@@ -125,22 +127,30 @@ namespace NIM_Game
 
         List<Image> images = new List<Image>()
         {
-            Resources.hallwaylvl2,
+            Resources.Bunker,
             Resources.commons,
             Resources.hallwaylvl2,
+            Resources.Third,
+            Resources.FourthDown
+
+        };
+        List<Image> degreeChairs = new List<Image>()
+        {
+            Resources.Bunker,
+            Resources.commons,
             Resources.hallwaylvl2,
-            Resources.hallwaylvl2
+            Resources.Third,
+            Resources.FourthDown
 
         };
 
 
         private void changeScene(int floor) // 0 for basement 1 for first floor etc
         {
-            this.BackgroundImage = images[floor];
-            // set background image
+            
             if (floor == 1 && currentFloor != 1)
             {
-                
+                this.BackgroundImage = images[floor];
                 currentFloor = floor;
                 OptionBTN1.Show();
                 OptionBTN2.Show();
@@ -175,6 +185,7 @@ namespace NIM_Game
                 }
 
                 currentFloor = floor;
+                this.BackgroundImage = images[floor];
                 OptionBTN3.Hide();
                 OptionBTN4.Hide();
                 OptionBTN2.Show();
