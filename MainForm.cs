@@ -50,25 +50,19 @@ namespace NIM_Game
         private void OptionBTN1_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Option 1 Pressed");
-            if (!isMathProblem)
+            if (!isMathProblem && degree != "")
             {
                 sendValue(0);
             }
-            else
-            {
-                doMath(int.Parse(OptionBTN1.Text), 0);
-            }
-
-            if (degree == "")
+            else if (degree == "")
             {
                 degree = "SE";
                 changeScene(1);
             }
             else
             {
-                sendValue(0);
+                doMath(int.Parse(OptionBTN1.Text), currentFloor);
             }
-                   
         }
         private void DialogueLabel_Click(object sender, EventArgs e)
         {
@@ -77,70 +71,57 @@ namespace NIM_Game
 
         private void OptionBTN2_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Option 2 Pressed");
-            if (!isMathProblem)
+            Console.WriteLine("Option 1 Pressed");
+            if (!isMathProblem && degree != "")
             {
                 sendValue(1);
             }
-            else
-            {
-                doMath(int.Parse(OptionBTN2.Text), 1);
-            }
-        }
-            if (degree == "")
+            else if (degree == "")
             {
                 degree = "IS";
                 changeScene(1);
             }
             else
             {
-                sendValue(1);
+                doMath(int.Parse(OptionBTN1.Text), currentFloor);
             }
         }
+            
 
         private void OptionBTN3_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Option 3 Pressed");
-            if (degree == "")
+            Console.WriteLine("Option 1 Pressed");
+            if (!isMathProblem && degree != "")
             {
-                degree = "GD";
+                sendValue(2);
+            }
+            else if (degree == "")
+            {
+                degree = "GS";
                 changeScene(1);
             }
             else
             {
-                sendValue(2);
+                doMath(int.Parse(OptionBTN1.Text), currentFloor);
             }
         }
-            if (!isMathProblem)
-            {
-                sendValue(2);
-            }
-            else
-            {
-                doMath(int.Parse(OptionBTN3.Text), 2);
-            }
-        }
+            
 
         private void OptionBTN4_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Option 4 Pressed");
-            if(!isMathProblem)
+            Console.WriteLine("Option 1 Pressed");
+            if (!isMathProblem && degree != "")
             {
                 sendValue(3);
             }
-            else
-            {
-                doMath(int.Parse(OptionBTN4.Text), 3);
-            }
-        }
-            if (degree == "")
+            else if (degree == "" && !isMathProblem)
             {
                 degree = "CS";
                 changeScene(1);
             }
             else
             {
-                sendValue(3);
+                doMath(int.Parse(OptionBTN1.Text), currentFloor);
             }
         }
 
@@ -181,7 +162,6 @@ namespace NIM_Game
             // set background image
             if (floor == 1 && currentFloor != 1)
             {
-                
                 currentFloor = floor;
                 OptionBTN1.Show();
                 OptionBTN2.Show();
@@ -277,8 +257,9 @@ namespace NIM_Game
             else
             {
                 Console.WriteLine("Incorrect");
-                isMathProblem = false;
+                AlternateDialogeConditionMet[floor] = true;
                 changeScene(floor);
+                isMathProblem = false;
             }
         }
 
@@ -332,28 +313,28 @@ namespace NIM_Game
             {
                 case 0:
 
-                    OptionBTN1.Text = correctAnswerIn.ToString();
+                    OptionBTN1.Text = correctAnswer.ToString();
                     OptionBTN2.Text = random.Next(10).ToString();
                     OptionBTN3.Text = random.Next(10).ToString();
                     OptionBTN4.Text = random.Next(10).ToString();
                     break;
                 case 1:
 
-                    OptionBTN2.Text = correctAnswerIn.ToString();
+                    OptionBTN2.Text = correctAnswer.ToString();
                     OptionBTN3.Text = random.Next(10).ToString();
                     OptionBTN4.Text = random.Next(10).ToString();
                     OptionBTN1.Text = random.Next(10).ToString();
                     break;
                 case 2:
 
-                    OptionBTN3.Text = correctAnswerIn.ToString();
+                    OptionBTN3.Text = correctAnswer.ToString();
                     OptionBTN4.Text = random.Next(10).ToString();
                     OptionBTN1.Text = random.Next(10).ToString();
                     OptionBTN2.Text = random.Next(10).ToString();
                     break;
                 case 3:
 
-                    OptionBTN4.Text = correctAnswerIn.ToString();
+                    OptionBTN4.Text = correctAnswer.ToString();
                     OptionBTN1.Text = random.Next(10).ToString();
                     OptionBTN2.Text = random.Next(10).ToString();
                     OptionBTN3.Text = random.Next(10).ToString();
