@@ -17,6 +17,11 @@ namespace NIM_Game
         int currentFloor = 2;
         string degree = "";
 
+        bool isMathProblem = false;
+
+        int correctAnswer = 5;
+
+        int score = 0;
 
         public MainForm()
         {
@@ -47,6 +52,15 @@ namespace NIM_Game
         private void OptionBTN1_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Option 1 Pressed");
+            if (!isMathProblem)
+            {
+                sendValue(0);
+            }
+            else
+            {
+                doMath(int.Parse(OptionBTN1.Text), 0);
+            }
+
             if (degree == "")
             {
                 degree = "SE";
@@ -66,6 +80,15 @@ namespace NIM_Game
         private void OptionBTN2_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Option 2 Pressed");
+            if (!isMathProblem)
+            {
+                sendValue(1);
+            }
+            else
+            {
+                doMath(int.Parse(OptionBTN2.Text), 1);
+            }
+        }
             if (degree == "")
             {
                 degree = "IS";
@@ -90,10 +113,28 @@ namespace NIM_Game
                 sendValue(2);
             }
         }
+            if (!isMathProblem)
+            {
+                sendValue(2);
+            }
+            else
+            {
+                doMath(int.Parse(OptionBTN3.Text), 2);
+            }
+        }
 
         private void OptionBTN4_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Option 4 Pressed");
+            if(!isMathProblem)
+            {
+                sendValue(3);
+            }
+            else
+            {
+                doMath(int.Parse(OptionBTN4.Text), 3);
+            }
+        }
             if (degree == "")
             {
                 degree = "CS";
@@ -225,8 +266,30 @@ namespace NIM_Game
             }
             else
             {
-                // math game stuff
-                //inMathPuzzle = true;
+                isMathProblem = true;
+                OptionBTN1.Show();
+                OptionBTN2.Show();
+                OptionBTN3.Show();
+                OptionBTN4.Show();
+                generateMathProblem();
+            }
+        }
+
+        private void doMath(int buttonValue, int floor)
+        {
+            if (correctAnswer == buttonValue)
+            {
+                Console.WriteLine("Correct");
+                score++;
+                AlternateDialogeConditionMet[floor] = true;
+                changeScene(floor);
+                isMathProblem = false;
+            } 
+            else
+            {
+                Console.WriteLine("Incorrect");
+                isMathProblem = false;
+                changeScene(floor);
             }
         }
 
@@ -245,7 +308,7 @@ namespace NIM_Game
         {
             int intOne = random.Next(10);
             int intTwo = random.Next(10);
-            int mathType = random.Next(4);
+            int mathType = random.Next(3);
             switch (mathType)
             {
                 case 0:
@@ -259,18 +322,13 @@ namespace NIM_Game
                     //subtration
                     DialogueLabel.Text = $"What is the answer to the math problem: {intOne} - {intTwo}";
                     int answerSubtract = intOne - intTwo;
-                    setCorrectAnswer(-answerSubtract);
+                    setCorrectAnswer(answerSubtract);
                     break;
                 case 2:
                     //multiplication
                     DialogueLabel.Text = $"What is the answer to the math problem: {intOne} * {intTwo}";
                     int answerMultiply = intOne * intTwo;
-                    break;
-                case 3:
-                    //division
-                    DialogueLabel.Text = $"What is the answer to the math problem: {intOne} / {intTwo}";
-                    float answerDivide = intOne / intTwo;
-                    setCorrectAnswer(answerDivide);
+                    setCorrectAnswer(answerMultiply);
                     break;
                 default:
                     DialogueLabel.Text = "Something Is Broken In The Math Switch Statement";
@@ -278,34 +336,35 @@ namespace NIM_Game
             }
         }
         
-        public void setCorrectAnswer(float correctAnswer) { 
-            int answerButton = random.Next(4);
-            switch (answerButton)
+        public void setCorrectAnswer(int correctAnswerIn) {
+            correctAnswer = correctAnswerIn;
+            int setButtons = random.Next(4);
+            switch (setButtons)
             {
                 case 0:
 
-                    OptionBTN1.Text = correctAnswer.ToString();
+                    OptionBTN1.Text = correctAnswerIn.ToString();
                     OptionBTN2.Text = random.Next(10).ToString();
                     OptionBTN3.Text = random.Next(10).ToString();
                     OptionBTN4.Text = random.Next(10).ToString();
                     break;
                 case 1:
 
-                    OptionBTN2.Text = correctAnswer.ToString();
+                    OptionBTN2.Text = correctAnswerIn.ToString();
                     OptionBTN3.Text = random.Next(10).ToString();
                     OptionBTN4.Text = random.Next(10).ToString();
                     OptionBTN1.Text = random.Next(10).ToString();
                     break;
                 case 2:
 
-                    OptionBTN3.Text = correctAnswer.ToString();
+                    OptionBTN3.Text = correctAnswerIn.ToString();
                     OptionBTN4.Text = random.Next(10).ToString();
                     OptionBTN1.Text = random.Next(10).ToString();
                     OptionBTN2.Text = random.Next(10).ToString();
                     break;
                 case 3:
 
-                    OptionBTN4.Text = correctAnswer.ToString();
+                    OptionBTN4.Text = correctAnswerIn.ToString();
                     OptionBTN1.Text = random.Next(10).ToString();
                     OptionBTN2.Text = random.Next(10).ToString();
                     OptionBTN3.Text = random.Next(10).ToString();
