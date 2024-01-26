@@ -84,7 +84,6 @@
             // 
             // OptionBTN2
             // 
-            this.OptionBTN2.AutoSize = true;
             this.OptionBTN2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.OptionBTN2.BackColor = System.Drawing.Color.Black;
             this.OptionBTN2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -102,7 +101,6 @@
             // 
             // OptionBTN4
             // 
-            this.OptionBTN4.AutoSize = true;
             this.OptionBTN4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.OptionBTN4.BackColor = System.Drawing.Color.Black;
             this.OptionBTN4.Dock = System.Windows.Forms.DockStyle.Right;
@@ -132,7 +130,6 @@
             // 
             // OptionBTN3
             // 
-            this.OptionBTN3.AutoSize = true;
             this.OptionBTN3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.OptionBTN3.BackColor = System.Drawing.Color.Black;
             this.OptionBTN3.Dock = System.Windows.Forms.DockStyle.Right;
@@ -150,7 +147,6 @@
             // 
             // OptionBTN1
             // 
-            this.OptionBTN1.AutoSize = true;
             this.OptionBTN1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.OptionBTN1.BackColor = System.Drawing.Color.Black;
             this.OptionBTN1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -194,14 +190,11 @@
             this.Text = "NIM";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.ResizeEnd += new System.EventHandler(this.MainForm_Resize);
             this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.TextBoxGroup.ResumeLayout(false);
             this.ButtonContainer.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.OptionsTopRow.ResumeLayout(false);
-            this.OptionsTopRow.PerformLayout();
             this.ResumeLayout(false);
 
         }

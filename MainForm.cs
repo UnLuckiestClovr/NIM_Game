@@ -29,7 +29,7 @@ namespace NIM_Game
 
         private void MainForm_Resize(object sender, EventArgs e)
         {
-            int newWidth = Convert.ToInt32(OptionsTopRow.Width * 0.4);
+            int newWidth = Convert.ToInt32(OptionsTopRow.Width * 0.48);
 
             OptionBTN1.Width = newWidth;
             OptionBTN2.Width = newWidth;
