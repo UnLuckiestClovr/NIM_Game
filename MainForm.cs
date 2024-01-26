@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NIM_Game.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace NIM_Game
     public partial class MainForm : Form
     {
         int currentFloor = 2;
+        string degree = "";
 
         bool isMathProblem = false;
 
@@ -28,7 +30,21 @@ namespace NIM_Game
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            changeScene(1);
+            //generateMathProblem();
+            //changeScene(1);
+            setDegree();
+        }
+
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            int newWidth = Convert.ToInt32(OptionsTopRow.Width * 0.48);
+
+            OptionBTN1.Width = newWidth;
+            OptionBTN2.Width = newWidth;
+            OptionBTN3.Width = newWidth;
+            OptionBTN4.Width = newWidth;
+
+            Console.WriteLine($"Resize Ran: Size {newWidth}");
         }
 
         private void OptionBTN1_Click(object sender, EventArgs e)
@@ -43,6 +59,16 @@ namespace NIM_Game
                 doMath(int.Parse(OptionBTN1.Text), 0);
             }
 
+            if (degree == "")
+            {
+                degree = "SE";
+                changeScene(1);
+            }
+            else
+            {
+                sendValue(0);
+            }
+                   
         }
         private void DialogueLabel_Click(object sender, EventArgs e)
         {
@@ -61,10 +87,30 @@ namespace NIM_Game
                 doMath(int.Parse(OptionBTN2.Text), 1);
             }
         }
+            if (degree == "")
+            {
+                degree = "IS";
+                changeScene(1);
+            }
+            else
+            {
+                sendValue(1);
+            }
+        }
 
         private void OptionBTN3_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Option 3 Pressed");
+            if (degree == "")
+            {
+                degree = "GD";
+                changeScene(1);
+            }
+            else
+            {
+                sendValue(2);
+            }
+        }
             if (!isMathProblem)
             {
                 sendValue(2);
@@ -85,6 +131,16 @@ namespace NIM_Game
             else
             {
                 doMath(int.Parse(OptionBTN4.Text), 3);
+            }
+        }
+            if (degree == "")
+            {
+                degree = "CS";
+                changeScene(1);
+            }
+            else
+            {
+                sendValue(3);
             }
         }
 
@@ -108,13 +164,24 @@ namespace NIM_Game
         new List<string>() { "Return to the commons", "Study with the coach", "","" },
         new List<string>() { "Return to the commons", "Take on the degree chair", "","" }};
 
+        List<Image> images = new List<Image>()
+        {
+            Resources.hallwaylvl2,
+            Resources.commons,
+            Resources.hallwaylvl2,
+            Resources.hallwaylvl2,
+            Resources.hallwaylvl2
+
+        };
+
 
         private void changeScene(int floor) // 0 for basement 1 for first floor etc
         {
-
+            this.BackgroundImage = images[floor];
             // set background image
             if (floor == 1 && currentFloor != 1)
             {
+                
                 currentFloor = floor;
                 OptionBTN1.Show();
                 OptionBTN2.Show();
@@ -136,6 +203,10 @@ namespace NIM_Game
             else
             {
                 if (floor == 1)
+                {
+                    floor = 2;
+                }
+                else if (floor == 2)
                 {
                     floor = 3;
                 }
@@ -209,6 +280,16 @@ namespace NIM_Game
                 isMathProblem = false;
                 changeScene(floor);
             }
+        }
+
+        private void setDegree()
+        {
+            DialogueLabel.Text = "Pick Your Degree";
+            OptionBTN1.Text = "SE";
+            OptionBTN2.Text = "IS";
+            OptionBTN3.Text = "GD";
+            OptionBTN4.Text = "CS";
+
         }
 
         private Random random = new Random();
