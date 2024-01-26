@@ -14,6 +14,7 @@ namespace NIM_Game
     public partial class MainForm : Form
     {
         int currentFloor = 2;
+        string degree = "";
 
 
         public MainForm()
@@ -23,15 +24,24 @@ namespace NIM_Game
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            generateMathProblem();
-            changeScene(1);
+            //generateMathProblem();
+            //changeScene(1);
+            setDegree();
         }
 
         private void OptionBTN1_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Option 1 Pressed");
-            sendValue(0);
-
+            if (degree == "")
+            {
+                degree = "SE"
+                changeScene(1);
+            }
+            else
+            {
+                sendValue(0);
+            }
+                   
         }
         private void DialogueLabel_Click(object sender, EventArgs e)
         {
@@ -105,6 +115,10 @@ namespace NIM_Game
             {
                 if (floor == 1)
                 {
+                    floor = 2;
+                }
+                else if (floor == 2)
+                {
                     floor = 3;
                 }
                 else if (floor == 3)
@@ -155,6 +169,16 @@ namespace NIM_Game
                 // math game stuff
                 //inMathPuzzle = true;
             }
+        }
+
+        private void setDegree()
+        {
+            DialogueLabel.Text = "Pick Your Degree";
+            OptionBTN1.Text = "SE";
+            OptionBTN2.Text = "IS";
+            OptionBTN3.Text = "GD";
+            OptionBTN4.Text = "CS";
+
         }
 
         private Random random = new Random();
