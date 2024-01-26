@@ -46,7 +46,7 @@ namespace NIM_Game
             Console.WriteLine("Option 1 Pressed");
             if (degree == "")
             {
-                degree = "SE"
+                degree = "SE";
                 changeScene(1);
             }
             else
