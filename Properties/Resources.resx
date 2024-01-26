@@ -121,4 +121,10 @@
   <data name="wasp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wasp.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="commons" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\commons.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hallwaylvl2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hallwaylvl2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

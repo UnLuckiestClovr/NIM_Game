@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NIM_Game.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -63,19 +64,43 @@ namespace NIM_Game
         private void OptionBTN2_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Option 2 Pressed");
-            sendValue(1);
+            if (degree == "")
+            {
+                degree = "IS";
+                changeScene(1);
+            }
+            else
+            {
+                sendValue(1);
+            }
         }
 
         private void OptionBTN3_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Option 3 Pressed");
-            sendValue(2); 
+            if (degree == "")
+            {
+                degree = "GD";
+                changeScene(1);
+            }
+            else
+            {
+                sendValue(2);
+            }
         }
 
         private void OptionBTN4_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Option 4 Pressed");
-            sendValue(3);
+            if (degree == "")
+            {
+                degree = "CS";
+                changeScene(1);
+            }
+            else
+            {
+                sendValue(3);
+            }
         }
 
         List<string> mainDialogue = new List<string>() {
@@ -98,13 +123,24 @@ namespace NIM_Game
         new List<string>() { "Return to the commons", "Study with the coach", "","" },
         new List<string>() { "Return to the commons", "Take on the degree chair", "","" }};
 
+        List<Image> images = new List<Image>()
+        {
+            Resources.hallwaylvl2,
+            Resources.commons,
+            Resources.hallwaylvl2,
+            Resources.hallwaylvl2,
+            Resources.hallwaylvl2
+
+        };
+
 
         private void changeScene(int floor) // 0 for basement 1 for first floor etc
         {
-
+            this.BackgroundImage = images[floor];
             // set background image
             if (floor == 1 && currentFloor != 1)
             {
+                
                 currentFloor = floor;
                 OptionBTN1.Show();
                 OptionBTN2.Show();
