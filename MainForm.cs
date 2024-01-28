@@ -21,6 +21,14 @@ namespace NIM_Game
 
         int correctAnswer = 5;
 
+        bool inBossFight = false;
+
+        int bossScore = 0;
+
+        bool gameOver = false;
+
+        bool gameWin = false;
+
         int score = 0;
 
         public MainForm()
@@ -51,8 +59,12 @@ namespace NIM_Game
 
         private void OptionBTN1_Click(object sender, EventArgs e)
         {
+            if (inBossFight)
+            {
+                doBossMath(int.Parse(OptionBTN1.Text));
+            }
             Console.WriteLine("Option 1 Pressed");
-            if (!isMathProblem && degree != "")
+            if (!isMathProblem && degree != "" && !inBossFight)
             {
                 sendValue(0);
             }
@@ -61,7 +73,7 @@ namespace NIM_Game
                 degree = "SE";
                 changeScene(1);
             }
-            else
+            else if (!inBossFight)
             {
                 doMath(int.Parse(OptionBTN1.Text), currentFloor);
             }
@@ -73,8 +85,12 @@ namespace NIM_Game
 
         private void OptionBTN2_Click(object sender, EventArgs e)
         {
+            if (inBossFight)
+            {
+                doBossMath(int.Parse(OptionBTN2.Text));
+            }
             Console.WriteLine("Option 1 Pressed");
-            if (!isMathProblem && degree != "")
+            if (!isMathProblem && degree != "" && !inBossFight)
             {
                 sendValue(1);
             }
@@ -83,7 +99,7 @@ namespace NIM_Game
                 degree = "IS";
                 changeScene(1);
             }
-            else
+            else if (!inBossFight)
             {
                 doMath(int.Parse(OptionBTN2.Text), currentFloor);
             }
@@ -92,8 +108,12 @@ namespace NIM_Game
 
         private void OptionBTN3_Click(object sender, EventArgs e)
         {
+            if (inBossFight)
+            {
+                doBossMath(int.Parse(OptionBTN3.Text));
+            }
             Console.WriteLine("Option 1 Pressed");
-            if (!isMathProblem && degree != "")
+            if (!isMathProblem && degree != "" && !inBossFight)
             {
                 sendValue(2);
             }
@@ -102,7 +122,7 @@ namespace NIM_Game
                 degree = "GS";
                 changeScene(1);
             }
-            else
+            else if (!inBossFight)
             {
                 doMath(int.Parse(OptionBTN3.Text), currentFloor);
             }
@@ -111,8 +131,12 @@ namespace NIM_Game
 
         private void OptionBTN4_Click(object sender, EventArgs e)
         {
+            if (inBossFight)
+            {
+                doBossMath(int.Parse(OptionBTN4.Text));
+            }
             Console.WriteLine("Option 1 Pressed");
-            if (!isMathProblem && degree != "")
+            if (!isMathProblem && degree != "" && !inBossFight)
             {
                 sendValue(3);
             }
@@ -121,7 +145,7 @@ namespace NIM_Game
                 degree = "CS";
                 changeScene(1);
             }
-            else
+            else if (!inBossFight)
             {
                 doMath(int.Parse(OptionBTN4.Text), currentFloor);
             }
@@ -252,8 +276,28 @@ namespace NIM_Game
                 OptionBTN2.Show();
                 OptionBTN3.Show();
                 OptionBTN4.Show();
-                generateMathProblem();
+                if (currentFloor != 4) { 
+                    generateMathProblem();
+                }
+                else
+                {
+                    doBossFight();
+                }
             }
+        }
+
+        private void doBossFight()
+        {
+            if (score < 3)
+            {
+                inBossFight = true;
+                generateImpossibleMathProblem();
+            } 
+            else
+            {
+                inBossFight = true;
+                generateMathProblem();
+            } 
         }
 
         private void doMath(int buttonValue, int floor)
@@ -293,6 +337,32 @@ namespace NIM_Game
             }
         }
 
+        private void doBossMath(int buttonValue)
+        {
+            if (correctAnswer == buttonValue)
+            {
+                Console.WriteLine("Correct");
+                bossScore++;
+                if (bossScore < 3)
+                {
+                    generateMathProblem();
+                } 
+                else
+                {
+                    gameOver = true;
+                    gameWin = true;
+                    inBossFight = false;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Incorrect");
+                gameOver = true;
+                gameWin = false;
+                inBossFight = false;
+            }
+        }
+
         private void setDegree()
         {
             DialogueLabel.Text = "Pick Your Degree";
@@ -301,6 +371,18 @@ namespace NIM_Game
             OptionBTN3.Text = "GD";
             OptionBTN4.Text = "CS";
 
+        }
+
+        private void generateImpossibleMathProblem()
+        {
+            int intOne = random.Next(10000);
+            int intTwo = random.Next(10000);
+            DialogueLabel.Text = $"What is the answer to the math problem: {intOne} +-*/ {intTwo}";
+            correctAnswer = random.Next(10000);
+            OptionBTN1.Text = random.Next(10000).ToString();
+            OptionBTN2.Text = random.Next(10000).ToString();
+            OptionBTN3.Text = random.Next(10000).ToString();
+            OptionBTN4.Text = random.Next(10000).ToString();
         }
 
         private Random random = new Random();
