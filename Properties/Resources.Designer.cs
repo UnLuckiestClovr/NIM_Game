@@ -143,6 +143,16 @@ namespace NIM_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IMG_20240128_164912145_HDR {
+            get {
+                object obj = ResourceManager.GetObject("IMG_20240128_164912145_HDR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rat {
             get {
                 object obj = ResourceManager.GetObject("rat", resourceCulture);

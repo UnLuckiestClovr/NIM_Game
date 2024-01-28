@@ -130,25 +130,28 @@
   <data name="commons" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\commons.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AngyMaple" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AngyMaple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="hallwaylvl2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hallwaylvl2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wasp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wasp.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AngyMaple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AngyMaple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AngyCantera" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AngyCantera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Bunker" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Bunker.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="FourthDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FourthDown.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Bunker" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bunker.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wasp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wasp.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_20240128_164912145_HDR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_20240128_164912145_HDR.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -194,7 +194,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = global::NIM_Game.Properties.Resources.Bunker;
+            this.BackgroundImage = global::NIM_Game.Properties.Resources.IMG_20240128_164912145_HDR;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1516, 932);
             this.Controls.Add(this.panel1);
