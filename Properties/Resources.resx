@@ -118,20 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AngyCoreyIS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AngyCoreyIS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AngyPritchardCS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AngyPritchardCS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Third" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Third.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="commons" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\commons.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AngyMaple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AngyMaple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="hallwaylvl2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hallwaylvl2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FourthDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FourthDown.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Bunker" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Bunker.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wasp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wasp.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,13 +142,13 @@
   <data name="AngyCantera" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AngyCantera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AngyCoreyIS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AngyCoreyIS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Bunker" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bunker.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AngyMaple" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AngyMaple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FourthDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FourthDown.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AngyPritchardCS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AngyPritchardCS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -41,7 +41,7 @@ namespace NIM_Game
             //generateMathProblem();
             //changeScene(1);
             setDegree();
-            //panel1.Hide();
+            panel1.Hide();
             panel1.BackColor = Color.Transparent;
         }
 
@@ -75,6 +75,7 @@ namespace NIM_Game
             }
             else if (!inBossFight)
             {
+
                 doMath(int.Parse(OptionBTN1.Text), currentFloor);
             }
         }
@@ -101,6 +102,7 @@ namespace NIM_Game
             }
             else if (!inBossFight)
             {
+
                 doMath(int.Parse(OptionBTN2.Text), currentFloor);
             }
         }
@@ -119,11 +121,12 @@ namespace NIM_Game
             }
             else if (degree == "")
             {
-                degree = "GS";
+                degree = "GD";
                 changeScene(1);
             }
             else if (!inBossFight)
             {
+
                 doMath(int.Parse(OptionBTN3.Text), currentFloor);
             }
         }
@@ -288,6 +291,21 @@ namespace NIM_Game
 
         private void doBossFight()
         {
+            panel1.Show();
+            switch (degree) {
+                case "SE":
+                    panel1.BackgroundImage = Resources.AngyCantera;
+                    break;
+                case "GD":
+                    panel1.BackgroundImage = Resources.AngyMaple;
+                    break;
+                case "IS":
+                    panel1.BackgroundImage = Resources.AngyCoreyIS;
+                    break;
+                case "CS":
+                    panel1.BackgroundImage = Resources.AngyPritchardCS;
+                    break;
+            }
             if (score < 3)
             {
                 inBossFight = true;
@@ -307,6 +325,12 @@ namespace NIM_Game
                 Console.WriteLine("Correct");
                 score++;
                 AlternateDialogeConditionMet[floor] = true;
+                panel1.Hide();
+                if (AlternateDialogeConditionMet[0] == true && AlternateDialogeConditionMet[2] == true && AlternateDialogeConditionMet[3] == true)
+                {
+                    AlternateDialogeConditionMet[1] = true;
+                    AlternateDialogeConditionMet[4] = true;
+                }
                 currentFloor = 1;
                 if (floor == 2)
                 {
@@ -321,8 +345,14 @@ namespace NIM_Game
             } 
             else
             {
+                panel1.Hide();
                 Console.WriteLine("Incorrect");
                 AlternateDialogeConditionMet[floor] = true;
+                if (AlternateDialogeConditionMet[0] == true && AlternateDialogeConditionMet[2] == true && AlternateDialogeConditionMet[3] == true)
+                {
+                    AlternateDialogeConditionMet[1] = true;
+                    AlternateDialogeConditionMet[4] = true;
+                }
                 currentFloor = 1;
                 if (floor == 2)
                 {
@@ -352,6 +382,7 @@ namespace NIM_Game
                     gameOver = true;
                     gameWin = true;
                     inBossFight = false;
+                    panel1.Hide();
                 }
             }
             else
@@ -360,6 +391,7 @@ namespace NIM_Game
                 gameOver = true;
                 gameWin = false;
                 inBossFight = false;
+                panel1.Hide();
             }
         }
 
@@ -388,6 +420,11 @@ namespace NIM_Game
         private Random random = new Random();
         public void generateMathProblem()
         {
+            if (!inBossFight)
+            {
+                panel1.Show();
+                panel1.BackgroundImage = Resources.rat;
+            }
             int intOne = random.Next(10);
             int intTwo = random.Next(10);
             int mathType = random.Next(3);
