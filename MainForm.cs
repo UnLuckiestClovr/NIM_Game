@@ -85,7 +85,7 @@ namespace NIM_Game
             }
             else
             {
-                doMath(int.Parse(OptionBTN1.Text), currentFloor);
+                doMath(int.Parse(OptionBTN2.Text), currentFloor);
             }
         }
             
@@ -104,7 +104,7 @@ namespace NIM_Game
             }
             else
             {
-                doMath(int.Parse(OptionBTN1.Text), currentFloor);
+                doMath(int.Parse(OptionBTN3.Text), currentFloor);
             }
         }
             
@@ -123,7 +123,7 @@ namespace NIM_Game
             }
             else
             {
-                doMath(int.Parse(OptionBTN1.Text), currentFloor);
+                doMath(int.Parse(OptionBTN4.Text), currentFloor);
             }
         }
 
@@ -263,6 +263,15 @@ namespace NIM_Game
                 Console.WriteLine("Correct");
                 score++;
                 AlternateDialogeConditionMet[floor] = true;
+                currentFloor = 1;
+                if (floor == 2)
+                {
+                    floor = 1;
+                } 
+                else if (floor == 3)
+                {
+                    floor = 2;
+                }
                 changeScene(floor);
                 isMathProblem = false;
             } 
@@ -270,6 +279,15 @@ namespace NIM_Game
             {
                 Console.WriteLine("Incorrect");
                 AlternateDialogeConditionMet[floor] = true;
+                currentFloor = 1;
+                if (floor == 2)
+                {
+                    floor = 1;
+                }
+                else if (floor == 3)
+                {
+                    floor = 2;
+                }
                 changeScene(floor);
                 isMathProblem = false;
             }
@@ -324,32 +342,31 @@ namespace NIM_Game
             switch (setButtons)
             {
                 case 0:
-
                     OptionBTN1.Text = correctAnswer.ToString();
-                    OptionBTN2.Text = random.Next(10).ToString();
-                    OptionBTN3.Text = random.Next(10).ToString();
-                    OptionBTN4.Text = random.Next(10).ToString();
+                    OptionBTN2.Text = random.Next(20).ToString();
+                    OptionBTN3.Text = random.Next(20).ToString();
+                    OptionBTN4.Text = random.Next(20).ToString();
                     break;
                 case 1:
 
                     OptionBTN2.Text = correctAnswer.ToString();
-                    OptionBTN3.Text = random.Next(10).ToString();
-                    OptionBTN4.Text = random.Next(10).ToString();
-                    OptionBTN1.Text = random.Next(10).ToString();
+                    OptionBTN3.Text = random.Next(20).ToString();
+                    OptionBTN4.Text = random.Next(20).ToString();
+                    OptionBTN1.Text = random.Next(20).ToString();
                     break;
                 case 2:
 
                     OptionBTN3.Text = correctAnswer.ToString();
-                    OptionBTN4.Text = random.Next(10).ToString();
-                    OptionBTN1.Text = random.Next(10).ToString();
-                    OptionBTN2.Text = random.Next(10).ToString();
+                    OptionBTN4.Text = random.Next(20).ToString();
+                    OptionBTN1.Text = random.Next(20).ToString();
+                    OptionBTN2.Text = random.Next(20).ToString();
                     break;
                 case 3:
 
                     OptionBTN4.Text = correctAnswer.ToString();
-                    OptionBTN1.Text = random.Next(10).ToString();
-                    OptionBTN2.Text = random.Next(10).ToString();
-                    OptionBTN3.Text = random.Next(10).ToString();
+                    OptionBTN1.Text = random.Next(20).ToString();
+                    OptionBTN2.Text = random.Next(20).ToString();
+                    OptionBTN3.Text = random.Next(20).ToString();
                     break;
             }
         }
