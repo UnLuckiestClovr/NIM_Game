@@ -133,6 +133,26 @@ namespace NIM_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GameLose {
+            get {
+                object obj = ResourceManager.GetObject("GameLose", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GameWin {
+            get {
+                object obj = ResourceManager.GetObject("GameWin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hallwaylvl2 {
             get {
                 object obj = ResourceManager.GetObject("hallwaylvl2", resourceCulture);

@@ -196,65 +196,68 @@ namespace NIM_Game
 
         private void changeScene(int floor) // 0 for basement 1 for first floor etc
         {
-            
-            if (floor == 1 && currentFloor != 1)
+            if (!gameOver && !gameWin)
             {
-                this.BackgroundImage = images[floor];
-                currentFloor = floor;
-                OptionBTN1.Show();
-                OptionBTN2.Show();
-                OptionBTN3.Show();
-                OptionBTN4.Show();
-                OptionBTN1.Text = buttonOptions[floor][0];
-                OptionBTN2.Text = buttonOptions[floor][1];
-                OptionBTN3.Text = buttonOptions[floor][2];
-                OptionBTN4.Text = buttonOptions[floor][3];
-                if (!AlternateDialogeConditionMet[floor])
+
+                if (floor == 1 && currentFloor != 1)
                 {
-                    DialogueLabel.Text = mainDialogue[floor];
+                    this.BackgroundImage = images[floor];
+                    currentFloor = floor;
+                    OptionBTN1.Show();
+                    OptionBTN2.Show();
+                    OptionBTN3.Show();
+                    OptionBTN4.Show();
+                    OptionBTN1.Text = buttonOptions[floor][0];
+                    OptionBTN2.Text = buttonOptions[floor][1];
+                    OptionBTN3.Text = buttonOptions[floor][2];
+                    OptionBTN4.Text = buttonOptions[floor][3];
+                    if (!AlternateDialogeConditionMet[floor])
+                    {
+                        DialogueLabel.Text = mainDialogue[floor];
+                    }
+                    else
+                    {
+                        DialogueLabel.Text = alternateDialogue[floor];
+                    }
                 }
                 else
                 {
-                    DialogueLabel.Text = alternateDialogue[floor];
-                }
-            }
-            else
-            {
-                if (floor == 1)
-                {
-                    floor = 2;
-                }
-                else if (floor == 2)
-                {
-                    floor = 3;
-                }
-                else if (floor == 3)
-                {
-                    floor = 4;
-                }
+                    if (floor == 1)
+                    {
+                        floor = 2;
+                    }
+                    else if (floor == 2)
+                    {
+                        floor = 3;
+                    }
+                    else if (floor == 3)
+                    {
+                        floor = 4;
+                    }
 
-                currentFloor = floor;
-                this.BackgroundImage = images[floor];
-                OptionBTN3.Hide();
-                OptionBTN4.Hide();
-                OptionBTN2.Show();
-                OptionBTN1.Text = buttonOptions[floor][0];
-                OptionBTN2.Text = buttonOptions[floor][1];
-                if (AlternateDialogeConditionMet[floor] && floor != 4)
-                {
-                    OptionBTN2.Hide();
-                }
-                if (!AlternateDialogeConditionMet[floor])
-                {
-                    DialogueLabel.Text = mainDialogue[floor];
-                }
-                else
-                {
-                    DialogueLabel.Text = alternateDialogue[floor];
-                }
+                    currentFloor = floor;
+                    this.BackgroundImage = images[floor];
+                    OptionBTN3.Hide();
+                    OptionBTN4.Hide();
+                    OptionBTN2.Show();
+                    OptionBTN1.Text = buttonOptions[floor][0];
+                    OptionBTN2.Text = buttonOptions[floor][1];
+                    if (AlternateDialogeConditionMet[floor] && floor != 4)
+                    {
+                        OptionBTN2.Hide();
+                    }
+                    if (!AlternateDialogeConditionMet[floor])
+                    {
+                        DialogueLabel.Text = mainDialogue[floor];
+                    }
+                    else
+                    {
+                        DialogueLabel.Text = alternateDialogue[floor];
+                    }
 
 
 
+                }
             }
 
 
@@ -264,6 +267,7 @@ namespace NIM_Game
         {
             Console.WriteLine("value sent:" + value);
             // if inMathPuzzle = false
+            if(!gameOver && !gameWin) {
             if (currentFloor == 1)
             {
                 changeScene(value);
@@ -285,7 +289,9 @@ namespace NIM_Game
                 else
                 {
                     doBossFight();
+
                 }
+            }
             }
         }
 
@@ -381,6 +387,12 @@ namespace NIM_Game
                 {
                     gameOver = true;
                     gameWin = true;
+                    OptionBTN1.Hide();
+                    OptionBTN2.Hide();
+                    OptionBTN3.Hide();
+                    OptionBTN4.Hide();
+                    this.BackgroundImage = Resources.GameWin;
+                    DialogueLabel.Text = "You beat the degree chair. You win";
                     inBossFight = false;
                     panel1.Hide();
                 }
@@ -390,6 +402,12 @@ namespace NIM_Game
                 Console.WriteLine("Incorrect");
                 gameOver = true;
                 gameWin = false;
+                OptionBTN1.Hide();
+                OptionBTN2.Hide();
+                OptionBTN3.Hide();
+                OptionBTN4.Hide();
+                this.BackgroundImage = Resources.GameLose;
+                DialogueLabel.Text = "You failed to beat the degree chair. You lose";
                 inBossFight = false;
                 panel1.Hide();
             }
